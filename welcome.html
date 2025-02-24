@@ -4,6 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/welcome.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div id="logo">
+        <img src="./assets/epicode_logo.png" alt="logo epicode" />
+      </div>
+    </header>
+    <main>
+      <h1>Welcome to <strong>your exam</strong></h1>
+      <h6 id="istruzioni">Instruction</h6>
+      <p id="paragrafo">
+        We don't expect most engineers to know the answers to all of these
+        questions, so don't worry if you're unsure of a few of them.
+      </p>
+      <div id="lista">
+        <ul>
+          <li>
+            Each questions is <strong>timed</strong> and can only be
+            <strong>answered once</strong>.
+          </li>
+          <li>
+            Changing browser tab or opening other windows will<strong
+              >invalidate the question</strong
+            >.
+          </li>
+          <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
+        </ul>
+      </div>
+      <div id="check-btn">
+        <input type="checkbox" />
+        <span>I promise to answer myself without help from anyone</span>
+        <a href="#"><button>PROCEED</button></a>
+      </div>
+    </main>
+  </body>
 </html>
