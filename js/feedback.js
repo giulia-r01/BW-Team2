@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
     star.dataset.value = i;
 
     star.addEventListener("click", function () {
-      console.log(this);
-      rating = this.dataset.value;
+      rating = parseInt(this.dataset.value);
       ratingValue.textContent = rating;
       updateStars(rating);
+      let rating = 0;
     });
 
-    star.addEventListener("mouseenter", function () {
-      updateStars(this.dataset.value);
+    star.addEventListener("mouseover", function () {
+      updateStars(parseInt(this.dataset.value));
     });
 
-    star.addEventListener("mouseleave", function () {
+    star.addEventListener("mouseout", function () {
       updateStars(rating);
     });
 
@@ -29,14 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateStars(value) {
     document.querySelectorAll(".star").forEach((star) => {
-      star.classList.remove("active");
-    });
-    console.log(value);
-    document.querySelectorAll(".star").forEach((star) => {
-      if (star.dataset.value <= value) {
-        console.log(star.dataset.value, value);
-        star.classList.add("active");
-      }
+      star.classList.toggle("active", parseInt(star.dataset.value) <= value);
     });
   }
 });
