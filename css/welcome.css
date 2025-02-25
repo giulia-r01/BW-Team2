@@ -1,38 +1,77 @@
 body {
-    font-family: "Inter", serif;
-    width: 80%;
-    margin: 0 auto;
-    background-image: url(../assets/bg.jpg);
-    background-size: cover;
-    color: white;
-    background-repeat: no-repeat;
-    line-height: 1em;
-
+  font-family: "Inter", serif;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  color: white;
+  background-repeat: no-repeat;
+  line-height: 1.5em;
 }
 
 h1 {
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-size: 60px;
-    font-style: normal;
-
-
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-size: 60px;
+  font-style: normal;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #logo img {
-    width: 150px;
-    margin-top: 2em;
-    margin-bottom: 5em;
+  width: 150px;
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
 
 #istruzioni {
-    color: #D20094;
-    font-family: "Outfit", serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 40px;
+  color: #d20094;
+  font-family: "Outfit", serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+  padding-bottom: 8px;
+}
+
+#lista ul {
+  padding-top: 40px;
+  padding-left: 23px;
+}
+
+#check-btn {
+  padding-top: 200px;
+}
+
+#check-btn label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-proceed {
+  margin-left: 150px;
+  padding: 13px 50px;
+  font-weight: 700;
+  background-color: #00ffff;
+  box-shadow: 0px 0px 18px 0px #00ffff;
+  border: 1px #00ffff solid;
+  font-size: 19px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none;
+  align-content: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: 2px solid #ffff;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url(../assets/check-solid.svg);
+  background-repeat: no-repeat;
 }

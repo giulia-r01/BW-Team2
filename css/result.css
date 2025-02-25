@@ -49,9 +49,8 @@ strong {
 }
 
 button {
-  display: inline-table;
-  margin-left: 40%;
-  margin-top: 17em;
+  margin-top: 4em;
+  margin-bottom: 8em;
   width: 13em;
   height: 3.5em;
     background-color: transparent;
@@ -63,4 +62,14 @@ button {
    border: none;
    
    
+}
+#myCanvas{
+  width: 400px;  
+  height: 400px; 
+  margin: 0 auto; 
+  
+}
+
+#contenitore-bottone-result{
+  text-align: center;
 }
