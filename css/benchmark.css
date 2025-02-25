@@ -1,21 +1,12 @@
 body {
-    <<<<<<< HEAD font-family: "Inter", serif;
+    font-family: "Inter", serif;
     width: 80%;
     margin: 0 auto;
     background-image: url(../assets/bg.jpg);
     background-size: cover;
     color: white;
     background-repeat: no-repeat;
-    line-height: 1em;
-    =======font-family: "Inter", serif;
-    width: 80%;
-    margin: 0 auto;
-    background-image: url(../assets/bg.jpg);
-    background-size: cover;
-    color: white;
-    background-repeat: no-repeat;
-    line-height: 1.7em;
-    >>>>>>>main
+    line-height: 1.5em;
 }
 
 h1 {
