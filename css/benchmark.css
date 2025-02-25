@@ -63,15 +63,27 @@ strong {
 #answer-2,
 #answer-3,
 #answer-4 {
+    display: inline-block;
+    box-shadow: 0px -3px 0px 0px #FEFBFD;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
     padding: 15px;
     margin: 10px auto;
-    width: 70%;
-    border-radius: 20px;
+    width: 30%;
+    border-radius: 60px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    text-align: center;
 }
+#answer-1 {
+    margin-right: 40px;
+    }
+    #answer-3{
+        margin-right: 40px;
+    }
+    #Contenitore-benchmark-question{
+        text-align: center;
+    }
 
 .h2banch {
     font-family: "Outfit", serif;
