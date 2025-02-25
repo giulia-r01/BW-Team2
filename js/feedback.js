@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
       updateStars(rating);
     });
 
-    star.addEventListener("mouseover", function () {
+    star.addEventListener("mouseenter", function () {
       updateStars(parseInt(this.dataset.value));
     });
 
-    star.addEventListener("mouseout", function () {
+    star.addEventListener("mouseleave", function () {
       updateStars(rating);
     });
 
