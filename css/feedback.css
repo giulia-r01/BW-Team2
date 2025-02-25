@@ -34,7 +34,7 @@ h2 {
 .paragraph2 {
   text-align: center;
   font-size: 1.5em;
-  margin-top: 13em;
+  margin-top: 3em;
 }
 
 strong {
@@ -89,7 +89,7 @@ button {
   gap: 5px;
 }
 .star {
-  font-size: 30px;
+  font-size: 60px;
   cursor: pointer;
   color: #0B113B;
   transition: color 0.3s;
