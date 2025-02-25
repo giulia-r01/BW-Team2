@@ -10,6 +10,7 @@ let chart = new Chart(myCanvas, {
         label: "Risposte",
         data: myData,
         backgroundColor: ["#C2128D", "#00FFFF"],
+        borderWidth: 0,
       },
     ],
   },
@@ -32,5 +33,6 @@ let chart = new Chart(myCanvas, {
         },
       },
     },
+    cutout: "70%",
   },
 });
