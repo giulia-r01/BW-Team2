@@ -108,7 +108,8 @@ const setNewQuestion = function (questionInput) {
     let question = document.getElementById('question')
     question.innerText = questionInput.question
 
-    console.log(questions.question)
+
+
 
     // inizializzazione
     let num = []
@@ -121,13 +122,13 @@ const setNewQuestion = function (questionInput) {
 
         let correctAnswer = document.getElementById("answer-" + num[x])
         correctAnswer.innerText = questionInput.correct_answer
-        num.slice(x, 1)
+        num.splice(x, 1)
 
-        for (let i = 0; i <= incorrect_answers.length; i++) {
-            x = Math.floor(Math.random() * incorrect_answers.length)
+        for (let i = 0; i <= questionInput.incorrect_answers.length; i++) {
+            x = Math.floor(Math.random() * questionInput.incorrect_answers.length)
             let incorrect_answers = getElementById("answer-" + num[x])
-            incorrect_answers.innerText = questionInput.incorrect_answers
-            num.slice(x, 1)
+            incorrect_answers.innerText = questionInput.incorrect_answers[x]
+            num.splice(x, 1)
         }
 
 
