@@ -1,0 +1,36 @@
+body {
+  font-family: "Inter", serif;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  color: white;
+  background-repeat: no-repeat;
+  line-height: 1em;
+}
+
+h1 {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-size: 60px;
+  font-style: normal;
+}
+
+
+strong {
+  font-weight: bold;
+}
+
+#logo img {
+  width: 150px;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+#istruzioni {
+  color: #d20094;
+  font-family: "Outfit", serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+}
