@@ -108,33 +108,27 @@ const setNewQuestion = function (questionInput) {
     let question = document.getElementById('question')
     question.innerText = questionInput.question
 
-
-
-
     // inizializzazione
     let num = []
     for (let i = 1; i <= 4; i++) {
         num.push(i)
-
-
-        let x = Math.floor(Math.random() * num.length)
-
-
-        let correctAnswer = document.getElementById("answer-" + num[x])
-        correctAnswer.innerText = questionInput.correct_answer
-        num.splice(x, 1)
-
-        for (let i = 0; i <= questionInput.incorrect_answers.length; i++) {
-            x = Math.floor(Math.random() * questionInput.incorrect_answers.length)
-            let incorrect_answers = getElementById("answer-" + num[x])
-            incorrect_answers.innerText = questionInput.incorrect_answers[x]
-            num.splice(x, 1)
-        }
-
-
-
-
-
     }
 
+    let x = Math.floor(Math.random() * num.length)
+
+
+    let correctAnswer = document.getElementById("answer-" + num[x])
+    correctAnswer.innerText = questionInput.correct_answer
+    num.splice(x, 1)
+
+
+    for (let i = 0; i < questionInput.incorrect_answers.length; i++) {
+        x = Math.floor(Math.random() * num.length)
+        let incorrect_answers = document.getElementById("answer-" + num[x])
+        incorrect_answers.innerText = questionInput.incorrect_answers[i]
+        num.splice(x, 1)
+    }
+
+
 }
+setNewQuestion(questions[0])
