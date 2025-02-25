@@ -6,7 +6,7 @@ body {
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
-  line-height: 1em;
+  line-height: 1.7em;
 }
 
 h1 {
@@ -15,7 +15,6 @@ h1 {
   font-size: 60px;
   font-style: normal;
 }
-
 
 strong {
   font-weight: bold;
@@ -33,4 +32,11 @@ strong {
   font-size: 30px;
   font-weight: bold;
   margin-top: 40px;
+}
+
+.h2banch {
+  font-family: "Outfit", serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
