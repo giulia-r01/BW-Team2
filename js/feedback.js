@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     star.addEventListener("click", function () {
       rating = parseInt(this.dataset.value);
-      ratingValue.textContent = rating;
       updateStars(rating);
     });
 
