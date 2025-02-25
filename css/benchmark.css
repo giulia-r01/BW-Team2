@@ -1,72 +1,85 @@
 body {
-    font-family: "Inter", serif;
-    width: 80%;
-    margin: 0 auto;
-    background-image: url(../assets/bg.jpg);
-    background-size: cover;
-    color: white;
-    background-repeat: no-repeat;
-    line-height: 1.5em;
+  font-family: "Inter", serif;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  color: white;
+  background-repeat: no-repeat;
+  line-height: 1.5em;
 }
 
 h1 {
-    font-family: "Outfit", serif;
-    font-optical-sizing: auto;
-    font-size: 60px;
-    font-style: normal;
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-size: 60px;
+  font-style: normal;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #logo img {
-    width: 150px;
-    margin-top: 2em;
-    margin-bottom: 5em;
+  width: 150px;
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
 
 #istruzioni {
-    color: #d20094;
-    font-family: "Outfit", serif;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 40px;
+  color: #d20094;
+  font-family: "Outfit", serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
 }
 
 #question {
-
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    margin: 30px;
-    width: 80%;
-
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px;
+  width: 80%;
 }
 
 #answer {
-    padding-top: 50px;
-
+  padding-top: 50px;
 }
 
 #answer-1,
 #answer-2,
 #answer-3,
 #answer-4 {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 15px;
-    margin: 10px auto;
-    width: 70%;
-    border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 15px;
+  margin: 10px auto;
+  width: 70%;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .h2banch {
-    font-family: "Outfit", serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 0.5em;
+  font-family: "Outfit", serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Inizio div footer per count-question */
+
+#count-question {
+  text-align: center;
+  padding-top: 180px;
+  font-size: 18px;
+  font-family: inter;
+}
+
+.ten {
+  color: #900080;
+  font-size: 18px;
+  font-family: inter;
+  font-weight: bold;
 }
