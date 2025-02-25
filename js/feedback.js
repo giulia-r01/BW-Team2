@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
       rating = parseInt(this.dataset.value);
       ratingValue.textContent = rating;
       updateStars(rating);
-      let rating = 0;
     });
 
     star.addEventListener("mouseover", function () {
