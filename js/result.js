@@ -1,7 +1,7 @@
 let myCanvas = document.getElementById("myCanvas").getContext("2d");
 myCanvas.width = 400;
 myCanvas.height = 400;
-let myLabels = ["Risposte sbagliate", "Risposte corrette"];
+let myLabels;
 let myData = [4, 6];
 let chart = new Chart(myCanvas, {
   type: "doughnut",
@@ -27,9 +27,9 @@ let chart = new Chart(myCanvas, {
             let dataIndex = tooltipItem.dataIndex;
             let value = tooltipItem.raw;
             if (dataIndex === 0) {
-              return `${label} ${value} `;
+              return `${label} ${value} Risposte sbagliate `;
             } else if (dataIndex === 1) {
-              return `${label} ${value} `;
+              return `${label} ${value} Risposte corrette`;
             }
             return label;
           },
