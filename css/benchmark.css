@@ -177,3 +177,8 @@ footer {
 }
 
 /* Fine div footer per count-question */
+
+.select {
+  background-color: #900080 !important;
+  color: white !important;
+}
