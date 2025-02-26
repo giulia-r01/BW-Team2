@@ -6,7 +6,7 @@ body {
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -56,31 +56,30 @@ strong {
 }
 
 input {
-margin: 2em;
-color: rgb(3, 2, 2);
-   font-size: 1.2em;
-   font-family: "Outfit", serif;
-   font-weight: 400;
-   border: none;
-   background-color: transparent;
-   margin-left: 25%;
+  margin: 2em;
+  color: rgb(3, 2, 2);
+  font-size: 1.2em;
+  font-family: "Outfit", serif;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  margin-left: 25%;
 }
-
 
 button {
   align-items: center;
   display: inline-table;
   margin-left: 40%;
   width: 13em;
-  height: 3.0em;
-   color: rgb(3, 2, 2);
-   font-size: 1.2em;
-   font-family: "Outfit", serif;
-   font-weight: bold;
-   box-shadow: 0px 0px 4px 4px aqua;
-   border: none;
-   background-color: aqua;
-
+  height: 3em;
+  color: rgb(3, 2, 2);
+  font-size: 1.2em;
+  font-family: "Outfit", serif;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px 4px aqua;
+  border: none;
+  background-color: aqua;
+  cursor: pointer;
 }
 
 .stars {
@@ -91,9 +90,10 @@ button {
 .star {
   font-size: 30px;
   cursor: pointer;
-  color: #0B113B;
+  color: #0b113b;
   transition: color 0.3s;
 }
-.star.active, .star:hover {
-  color: #00FFFF;
+.star.active,
+.star:hover {
+  color: #00ffff;
 }
