@@ -179,6 +179,8 @@ const questions = [
 ]
 
 let currentQuestion = 0
+let correctAnswersCount = 0
+
 
 const setNewQuestion = function (questionInput) {
     let question = document.getElementById("question")
@@ -205,16 +207,20 @@ const setNewQuestion = function (questionInput) {
 }
 setNewQuestion(questions[currentQuestion])
 
-/*
-    let correctAnswersCount = 0
-    const checkAnswer = function (selectedAnswer) {
+
+
+const checkAnswer = function (selectedAnswer) {
     const currentQuestionData = questions[currentQuestion]
     const correntAnswer = currentQuestionData.correct_answer
 
-    if (selectedAnswer === correct_answer) {
+    if (selectedAnswer === correntAnswer) {
         correctAnswersCount++
+        console.log("Risposte corrette fino ad ora: " + correctAnswersCount)
     }
-} */
+}
+
+
+
 
 const selectAnswer = document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").forEach(answerBox => {
     answerBox.addEventListener("click", () => {
@@ -222,10 +228,14 @@ const selectAnswer = document.querySelectorAll("#answer-1, #answer-2, #answer-3,
         document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").forEach(box => {
             if (box !== answerBox) {
                 box.classList.remove("select");
+
             }
         });
         answerBox.classList.toggle("select");
+
+
         return answerBox
+
     });
 });
 
@@ -233,6 +243,8 @@ const selectAnswer = document.querySelectorAll("#answer-1, #answer-2, #answer-3,
 
 const button = document.getElementById("procedi")
 button.addEventListener("click", () => {
+    const selected = document.querySelector(".select")
+    checkAnswer(selected.innerText)
     if (currentQuestion < questions.length - 1) {
         currentQuestion++
         setNewQuestion(questions[currentQuestion])
@@ -245,7 +257,7 @@ button.addEventListener("click", () => {
 
     } else {
         window.location.href = "../results.html"
-        localStorage.setItem("punteggio", 5)
+        localStorage.setItem("punteggio", correctAnswersCount())
 
         // quando currentQuestion diventa maggiore di questions.lenght
         // vai a pagina finale
