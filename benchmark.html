@@ -19,6 +19,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <<<<<<< HEAD =======
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    >>>>>>> main
   </head>
 
   <body>
@@ -26,16 +29,26 @@
       <div id="logo">
         <img src="./assets/epicode_logo.png" alt="logo epicode" />
       </div>
-      <div id="contatore"></div>
+      <div id="contatore" class="chart-container">
+        <canvas id="timer"></canvas>
+        <div id="contatore-testo">
+          SECONDS
+          <div id="contatore-numero"></div>
+          REMANING
+        </div>
+      </div>
     </header>
     <main>
-      <conteiner id="question"> </conteiner>
-      <conteiner id="answer"></conteiner>
-      <div id="answer-1"></div>
-      <div id="answer-2"></div>
-      <div id="answer-3"></div>
-      <div id="answer-4"></div>
+      <div id="Contenitore-benchmark-question">
+        <div id="question"></div>
+        <conteiner id="answer"></conteiner>
+        <div id="answer-1"></div>
+        <div id="answer-2"></div>
+        <div id="answer-3"></div>
+        <div id="answer-4"></div>
+      </div>
     </main>
+    <div><button id="procedi">Procedi →</button></div>
     <footer id="questionNumber"></footer>
     <script src="./js/banchmark.js"></script>
   </body>

@@ -1,3 +1,70 @@
+/*ANNA:Js Timer*/
+const ctx = document.getElementById("timer").getContext("2d")
+
+// Tempo iniziale del timer
+let timeRemaining = 60
+
+// Dati grafico
+let data = {
+  datasets: [
+    {
+      label: "Conto alla rovescia",
+      data: [timeRemaining, 60 - timeRemaining], // Parte rimanente e parte già trascorsa
+      backgroundColor: ["rgba(0,0,255,0.0)", "#00FFFF"], // Colore del timer
+      borderColor: ["#rgba(0,0,255,0.0)", "#00FFFF"], // Colore dei bordi
+      borderWidth: 0,
+    },
+  ],
+}
+
+// Opzioni per il grafico a ciambella
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    tooltip: {
+      enabled: true,
+    },
+  },
+  // Apertura centrale grafico a ciambella
+  cutout: "80%", //  Dimensione della striscia
+  rotation: 0, // Rotazione del grafico
+  circumference: 360, // Circonferenza del grafico
+}
+
+// Crea il grafico a ciambella
+const doughnutChart = new Chart(ctx, {
+  type: "doughnut",
+  data: data,
+  options: options,
+})
+
+// Funzione per aggiornare il timer e il grafico
+function updateTimer() {
+  // Decrementa il tempo rimanente
+  if (timeRemaining > 0) {
+    timeRemaining--
+  } else {
+    clearInterval(timerInterval) // Ferma il timer quando arriva a zero
+    alert("Tempo scaduto! Passa alla prossima domanda")
+  }
+
+  // Testo del timer
+  document.getElementById("contatore-numero").textContent = ` ${timeRemaining} `
+
+  // Aggiorna i dati del grafico
+  data.datasets[0].data = [timeRemaining, 60 - timeRemaining]
+
+  // Aggiorno solo la sezione del timer
+  doughnutChart.update()
+}
+
+// Timer che aggiorna il grafico e il timer ogni secondo (1000 MS)
+const timerInterval = setInterval(updateTimer, 1000)
+/*Fine js timer*/
+
 const questions = [
   {
     category: "Science: Computers",
@@ -94,7 +161,7 @@ const questions = [
   },
 ]
 
-window.onload = function () {}
+let currentQuestion = 0
 
 const setNewQuestion = function (questionInput) {
   let question = document.getElementById("question")
@@ -119,4 +186,29 @@ const setNewQuestion = function (questionInput) {
     num.splice(x, 1)
   }
 }
-setNewQuestion(questions[0])
+setNewQuestion(questions[currentQuestion])
+
+/*
+    let correctAnswersCount = 0
+    const checkAnswer = function (selectedAnswer) {
+    const currentQuestionData = questions[currentQuestion]
+    const correntAnswer = currentQuestionData.correct_answer
+
+    if (selectedAnswer === correct_answer) {
+        correctAnswersCount++
+    }
+} */
+
+const button = document.getElementById("procedi")
+button.addEventListener("click", () => {
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++
+    setNewQuestion(questions[currentQuestion])
+  } else {
+    window.location.href = "../results.html"
+    localStorage.setItem("punteggio", 5)
+
+    // quando currentQuestion diventa maggiore di questions.lenght
+    // vai a pagina finale
+  }
+})

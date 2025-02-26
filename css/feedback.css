@@ -83,3 +83,17 @@ button {
 
 }
 
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: #0B113B;
+  transition: color 0.3s;
+}
+.star.active, .star:hover {
+  color: #00FFFF;
+}

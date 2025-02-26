@@ -73,3 +73,15 @@ button {
 #contenitore-bottone-result{
   text-align: center;
 }
+
+#container-grafico {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+max-width: 900px;
+  margin: 0 auto;
+  
+} 
+
