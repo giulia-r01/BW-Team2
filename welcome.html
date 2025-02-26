@@ -48,15 +48,27 @@
           <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
         </ul>
       </div>
-      <div id="check-btn">
-        <input id="check" type="checkbox" />
+      <form id="check-btn">
+        <input id="check" type="checkbox" required />
         <label for="check"
           >I promise to answer myself without help from anyone</label
         >
-        <a href="./benchmark.html"
-          ><button class="btn-proceed">PROCEED</button></a
-        >
-      </div>
+        <button type="submit" class="btn-proceed">PROCEED</button>
+      </form>
     </main>
+
+    <script>
+      document
+        .getElementById("check-btn")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (document.getElementById("check").checked) {
+            window.location.href = "./benchmark.html";
+          } else {
+            alert("You must check the box to proceed.");
+          }
+        });
+    </script>
   </body>
 </html>
