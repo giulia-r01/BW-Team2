@@ -1,8 +1,8 @@
 /*ANNA:Js Timer*/
-const ctx = document.getElementById("timer").getContext("2d")
+const ctx = document.getElementById("timer").getContext("2d");
 
 // Tempo iniziale del timer
-let timeRemaining = 60
+let timeRemaining = 60;
 
 // Dati grafico
 let data = {
@@ -15,7 +15,7 @@ let data = {
       borderWidth: 0,
     },
   ],
-}
+};
 
 // Opzioni per il grafico a ciambella
 const options = {
@@ -32,37 +32,39 @@ const options = {
   cutout: "80%", //  Dimensione della striscia
   rotation: 0, // Rotazione del grafico
   circumference: 360, // Circonferenza del grafico
-}
+};
 
 // Crea il grafico a ciambella
 const doughnutChart = new Chart(ctx, {
   type: "doughnut",
   data: data,
   options: options,
-})
+});
 
 // Funzione per aggiornare il timer e il grafico
 function updateTimer() {
   // Decrementa il tempo rimanente
   if (timeRemaining > 0) {
-    timeRemaining--
+    timeRemaining--;
   } else {
-    clearInterval(timerInterval) // Ferma il timer quando arriva a zero
-    alert("Tempo scaduto! Passa alla prossima domanda")
+    clearInterval(timerInterval); // Ferma il timer quando arriva a zero
+    alert("Tempo scaduto! Passa alla prossima domanda");
   }
 
   // Testo del timer
-  document.getElementById("contatore-numero").textContent = ` ${timeRemaining} `
+  document.getElementById(
+    "contatore-numero"
+  ).textContent = ` ${timeRemaining} `;
 
   // Aggiorna i dati del grafico
-  data.datasets[0].data = [timeRemaining, 60 - timeRemaining]
+  data.datasets[0].data = [timeRemaining, 60 - timeRemaining];
 
   // Aggiorno solo la sezione del timer
-  doughnutChart.update()
+  doughnutChart.update();
 }
 
 // Timer che aggiorna il grafico e il timer ogni secondo (1000 MS)
-const timerInterval = setInterval(updateTimer, 1000)
+const timerInterval = setInterval(updateTimer, 1000);
 /*Fine js timer*/
 
 const questions = [
@@ -159,34 +161,34 @@ const questions = [
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
-]
+];
 
-let currentQuestion = 0
+let currentQuestion = 0;
 
 const setNewQuestion = function (questionInput) {
-  let question = document.getElementById("question")
-  question.innerText = questionInput.question
+  let question = document.getElementById("question");
+  question.innerText = questionInput.question;
 
   // inizializzazione
-  let num = []
+  let num = [];
   for (let i = 1; i <= 4; i++) {
-    num.push(i)
+    num.push(i);
   }
 
-  let x = Math.floor(Math.random() * num.length)
+  let x = Math.floor(Math.random() * num.length);
 
-  let correctAnswer = document.getElementById("answer-" + num[x])
-  correctAnswer.innerText = questionInput.correct_answer
-  num.splice(x, 1)
+  let correctAnswer = document.getElementById("answer-" + num[x]);
+  correctAnswer.innerText = questionInput.correct_answer;
+  num.splice(x, 1);
 
   for (let i = 0; i < questionInput.incorrect_answers.length; i++) {
-    x = Math.floor(Math.random() * num.length)
-    let incorrect_answers = document.getElementById("answer-" + num[x])
-    incorrect_answers.innerText = questionInput.incorrect_answers[i]
-    num.splice(x, 1)
+    x = Math.floor(Math.random() * num.length);
+    let incorrect_answers = document.getElementById("answer-" + num[x]);
+    incorrect_answers.innerText = questionInput.incorrect_answers[i];
+    num.splice(x, 1);
   }
-}
-setNewQuestion(questions[currentQuestion])
+};
+setNewQuestion(questions[currentQuestion]);
 
 /*
     let correctAnswersCount = 0
@@ -199,27 +201,27 @@ setNewQuestion(questions[currentQuestion])
     }
 } */
 
-const button = document.getElementById("procedi")
+const button = document.getElementById("procedi");
 button.addEventListener("click", () => {
   if (currentQuestion < questions.length - 1) {
-    currentQuestion++
-    setNewQuestion(questions[currentQuestion])
+    currentQuestion++;
+    setNewQuestion(questions[currentQuestion]);
   } else {
-    window.location.href = "../results.html"
-    localStorage.setItem("punteggio", 5)
+    window.location.href = "../results.html";
+    localStorage.setItem("punteggio", 5);
 
     // quando currentQuestion diventa maggiore di questions.lenght
     // vai a pagina finale
   }
-})
+});
 
 /* funzione per incrementare il numero della pagina nel footer al click del pulsante */
 
-let countQuestion = 1
+let countQuestion = 1;
 
 document.getElementById("procedi").addEventListener("click", function () {
   if (countQuestion < 10) {
-    countQuestion++
-    document.getElementById("output").textContent = countQuestion
+    countQuestion++;
+    document.getElementById("output").textContent = countQuestion;
   }
-})
+});
