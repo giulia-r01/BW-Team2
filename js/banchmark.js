@@ -120,14 +120,3 @@ const setNewQuestion = function (questionInput) {
   }
 }
 setNewQuestion(questions[0])
-
-/* funzione per incrementare il numero della pagina nel footer al click del pulsante */
-
-let countQuestion = 1
-
-document.getElementById("incrementBtn").addEventListener("click", function () {
-  if (countQuestion < 10) {
-    countQuestion++
-    document.getElementById("output").textContent = countQuestion
-  }
-})
