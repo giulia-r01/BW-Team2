@@ -1,23 +1,23 @@
 body {
-  font-family: "Inter", serif;
-  width: 80%;
-  margin: 0 auto;
-  background-image: url(../assets/bg.jpg);
-  background-size: cover;
-  color: white;
-  background-repeat: no-repeat;
-  line-height: 1.5em;
+    font-family: "Inter", serif;
+    width: 80%;
+    margin: 0 auto;
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    line-height: 1.5em;
 }
 
 h1 {
-  font-family: "Outfit", serif;
-  font-optical-sizing: auto;
-  font-size: 60px;
-  font-style: normal;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    font-style: normal;
 }
 
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /*#logo img {
@@ -26,21 +26,21 @@ strong {
     margin-bottom: 5em;
 }*/
 #logo {
-  display: inline-block;
+    display: inline-block;
 }
 
 #logo img {
-  display: inline-block;
-  width: 150px;
-  margin-bottom: 150px;
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 150px;
 }
 
 #istruzioni {
-  color: #d20094;
-  font-family: "Outfit", serif;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 40px;
+    color: #d20094;
+    font-family: "Outfit", serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
 }
 
 /*#question {
@@ -53,81 +53,85 @@ strong {
 }*/
 
 #answer {
-  padding-top: 50px;
+    padding-top: 50px;
 }
+
+
 
 #answer-1,
 #answer-2,
 #answer-3,
 #answer-4 {
-  display: inline-block;
-  box-shadow: 0px -3px 0px 0px #fefbfd;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 15px;
-  margin: 10px auto;
-  width: 30%;
-  border-radius: 60px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  text-align: center;
+    display: inline-block;
+    box-shadow: 0px -3px 0px 0px #fefbfd;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    margin: 10px auto;
+    width: 30%;
+    border-radius: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-align: center;
 }
 
+
+
 #answer-1 {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 #answer-3 {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 
 #Contenitore-benchmark-question {
-  text-align: center;
+    text-align: center;
 }
 
 .h2banch {
-  font-family: "Outfit", serif;
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 0.5em;
+    font-family: "Outfit", serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0.5em;
 }
 
 /*ANNA:Timer*/
 #contatore {
-  display: inline-block;
-  margin-top: 40px;
-  position: relative;
-  height: 150px;
-  margin-left: 850px;
-  position: relative;
-  width: 15%;
-  height: auto;
+    display: inline-block;
+    margin-top: 40px;
+    position: relative;
+    height: 150px;
+    margin-left: 850px;
+    position: relative;
+    width: 15%;
+    height: auto;
 }
 
 canvas {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 #timer {
-  font-size: 30px;
-  margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 #contatore-testo {
-  font-family: "Inter", serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 10px;
-  color: white;
-  text-align: center;
-  line-height: 3em;
+    font-family: "Inter", serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 3em;
 }
 
 #contatore-numero {
-  font-size: 50px;
+    font-size: 50px;
 }
 
 /*Fine Timer*/
@@ -135,43 +139,48 @@ canvas {
 /*pulsante "Procedi" */
 
 #procedi {
-  font-size: 20px;
-  font-weight: bolder;
-  box-shadow: 0px -3px 0px 0px #fefbfd;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  width: 200px;
-  height: 50px;
-  margin-left: 100px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 0px -3px 0px 0px #fefbfd;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #procedi:hover {
-  color: rgb(3, 2, 2);
-  box-shadow: 0px 0px 4px 4px aqua;
-  border: none;
-  background-color: aqua;
-  transform: scale(1.05);
+    color: rgb(3, 2, 2);
+    box-shadow: 0px 0px 4px 4px aqua;
+    border: none;
+    background-color: aqua;
+    transform: scale(1.05);
 }
 
 /* Inizio div footer per count-question */
 
 #count-question {
-  text-align: center;
-  padding-top: 180px;
-  font-size: 18px;
-  font-family: inter;
+    text-align: center;
+    padding-top: 180px;
+    font-size: 18px;
+    font-family: inter;
 }
 
 .ten {
-  color: #900080;
-  font-size: 18px;
-  font-family: inter;
-  font-weight: bold;
+    color: #900080;
+    font-size: 18px;
+    font-family: inter;
+    font-weight: bold;
 }
 
 /* Fine div footer per count-question */
+
+.select {
+    background-color: #900080 !important;
+    color: white !important;
+}
