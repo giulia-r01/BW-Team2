@@ -212,3 +212,14 @@ button.addEventListener("click", () => {
     // vai a pagina finale
   }
 })
+
+/* funzione per incrementare il numero della pagina nel footer al click del pulsante */
+
+let countQuestion = 1
+
+document.getElementById("procedi").addEventListener("click", function () {
+  if (countQuestion < 10) {
+    countQuestion++
+    document.getElementById("output").textContent = countQuestion
+  }
+})
