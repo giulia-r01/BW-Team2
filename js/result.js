@@ -1,4 +1,6 @@
 let myCanvas = document.getElementById("myCanvas").getContext("2d");
+myCanvas.width = 400;
+myCanvas.height = 400;
 let myLabels = ["Risposte sbagliate", "Risposte corrette"];
 let myData = [4, 6];
 let chart = new Chart(myCanvas, {
@@ -16,6 +18,7 @@ let chart = new Chart(myCanvas, {
   },
   options: {
     rotation: Math.PI,
+    responsive: false,
     plugins: {
       tooltip: {
         callbacks: {
