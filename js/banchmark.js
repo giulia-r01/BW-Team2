@@ -1,5 +1,5 @@
 /*ANNA:Js Timer*/
-const ctx = document.getElementById("timer").getContext("2d")
+const ctx = document.getElementById("timer").getContext("2d");
 
 // Tempo iniziale del timer
 let timeRemaining = 60
@@ -179,7 +179,7 @@ const questions = [
     },
 ]
 
-let currentQuestion = 0
+let currentQuestion = 0;
 
 const setNewQuestion = function (questionInput) {
     let question = document.getElementById("question")
@@ -217,7 +217,7 @@ setNewQuestion(questions[currentQuestion])
     }
 } */
 
-const button = document.getElementById("procedi")
+const button = document.getElementById("procedi");
 button.addEventListener("click", () => {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++
@@ -234,7 +234,7 @@ button.addEventListener("click", () => {
 
 /* funzione per incrementare il numero della pagina nel footer al click del pulsante */
 
-let countQuestion = 1
+let countQuestion = 1;
 
 document.getElementById("procedi").addEventListener("click", function () {
     if (countQuestion < 10) {
