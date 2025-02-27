@@ -46,3 +46,20 @@ let chart = new Chart(myCanvas, {
     cutout: "70%",
   },
 });
+
+if (punteggio > 5) {
+  const exampassed = document.getElementById("paragrafo-centro1");
+  const exampassed2 = document.getElementById("paragrafo-centro3");
+  exampassed3 = document.getElementById("paragrafo-centro2");
+  exampassed.innerHTML = `Congratulations !`;
+  exampassed2.innerHTML = `You passed the exam.`;
+  exampassed3.innerHTML = `we'll send you the certificate <br />in few minutes.<br />check your
+        email (including <br />promotions / spam folder)`;
+} else if (punteggio >= 0 && punteggio <= 5) {
+  const examfailed = document.getElementById("paragrafo-centro1");
+  const examfailed2 = document.getElementById("paragrafo-centro4");
+  const examfailed3 = document.getElementById("paragrafo-centro2");
+  examfailed.innerHTML = `Too bad !`;
+  examfailed2.innerHTML = `You failed the exam`;
+  examfailed3.innerHTML = `You have another chance next month,<br/> and with a bit more preparation,<br/> you'll definitely do better.<br/> Keep pushing forward, and use this time<br/> to focus on the<br/> areas that need improvement!`;
+}
