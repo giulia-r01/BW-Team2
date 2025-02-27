@@ -56,7 +56,7 @@ function updateTimer() {
   document.getElementById("contatore-numero").textContent = ` ${timeRemaining} `
 
   // Aggiorna i dati del grafico
-  data.datasets[0].data = [timeRemaining, 60 - timeRemaining]
+  data.datasets[0].data = [60 - timeRemaining, timeRemaining] // Reverse order
 
   // Aggiorno solo la sezione del timer
   doughnutChart.update()
@@ -179,6 +179,7 @@ const questions = [
 ]
 
 let currentQuestion = 0
+let correctAnswersCount = 0
 
 const setNewQuestion = function (questionInput) {
   let question = document.getElementById("question")
@@ -205,33 +206,15 @@ const setNewQuestion = function (questionInput) {
 }
 setNewQuestion(questions[currentQuestion])
 
-/*
-    let correctAnswersCount = 0
-    let wrongAnswersCount = 0
-    const checkAnswer = function (selectedAnswer) {
-    const currentQuestionData = questions[currentQuestion]
-    const correntAnswer = currentQuestionData.correct_answer
-
-    if (selectedAnswer === correct_answer) {
-        correctAnswersCount++
-    } 
-} */
-
-/* test 
-let correctAnswersCount = 0;
-let wrongAnswersCount = 0;
-
 const checkAnswer = function (selectedAnswer) {
-    const currentQuestionData = questions[currentQuestion];
-    const correctAnswer = currentQuestionData.correct_answer;
+  const currentQuestionData = questions[currentQuestion]
+  const correntAnswer = currentQuestionData.correct_answer
 
-    if (selectedAnswer === correctAnswer) {
-        correctAnswersCount++;
-    } else {
-        wrongAnswersCount++;
-    }
-};
- */
+  if (selectedAnswer === correntAnswer) {
+    correctAnswersCount++
+    console.log("Risposte corrette fino ad ora: " + correctAnswersCount)
+  }
+}
 
 const selectAnswer = document
   .querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4")
@@ -246,12 +229,15 @@ const selectAnswer = document
           }
         })
       answerBox.classList.toggle("select")
+
       return answerBox
     })
   })
 
 const button = document.getElementById("procedi")
 button.addEventListener("click", () => {
+  const selected = document.querySelector(".select")
+  checkAnswer(selected.innerText)
   if (currentQuestion < questions.length - 1) {
     currentQuestion++
     setNewQuestion(questions[currentQuestion])
@@ -265,7 +251,7 @@ button.addEventListener("click", () => {
       })
   } else {
     window.location.href = "../results.html"
-    localStorage.setItem("punteggio", 5)
+    localStorage.setItem("punteggio", correctAnswersCount())
 
     // quando currentQuestion diventa maggiore di questions.lenght
     // vai a pagina finale
