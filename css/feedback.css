@@ -57,6 +57,7 @@ strong {
 }
 
 input {
+  width: 58%;
   margin: 2em;
   color: rgb(250, 238, 238);
   font-size: 1.2em;
