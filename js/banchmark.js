@@ -183,15 +183,35 @@ let currentQuestion = 0
 let correctAnswersCount = 0
 
 
-
+//domande Benchmark//
 const setNewQuestion = function (questionInput) {
     let question = document.getElementById("question")
     question.innerHTML = `<h2>${questionInput.question}</h2>`
 
-    // inizializzazione
+    // nascondo tutti i box// let temp "temporaneas"
+    let temp = document.getElementById("answer-1")
+    temp.classList.add("nascosta");
+
+    temp = document.getElementById("answer-2")
+    temp.classList.add("nascosta");
+
+    temp = document.getElementById("answer-3")
+    temp.classList.add("nascosta");
+
+    temp = document.getElementById("answer-4")
+    temp.classList.add("nascosta");
+
+    // inizializzazione//
     let num = []
-    for (let i = 1; i <= 4; i++) {
+    const numeroRisposte = questionInput.incorrect_answers.length + 1
+    for (let i = 1; i <= numeroRisposte; i++) {
         num.push(i)
+    }
+
+    // mostro solo box delle risposte
+
+    for (let i = 1; i <= numeroRisposte; i++) {
+        document.getElementById("answer-" + i).classList.remove("nascosta");
     }
 
     let x = Math.floor(Math.random() * num.length)
@@ -209,6 +229,7 @@ const setNewQuestion = function (questionInput) {
 }
 setNewQuestion(questions[currentQuestion])
 
+//conteggio risposte corrette//
 const checkAnswer = function (selectedAnswer) {
     const currentQuestionData = questions[currentQuestion]
     const correntAnswer = currentQuestionData.correct_answer
@@ -219,7 +240,7 @@ const checkAnswer = function (selectedAnswer) {
     }
 
 }
-
+//aggiungiamo classe per selezionare una risposta//
 const selectAnswer = document
     .querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4")
     .forEach((answerBox) => {
@@ -238,6 +259,7 @@ const selectAnswer = document
         })
     })
 
+//funzioni pulsante "procedi"
 const button = document.getElementById("procedi")
 button.addEventListener("click", () => {
     const selected = document.querySelector(".select")

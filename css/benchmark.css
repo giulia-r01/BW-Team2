@@ -182,3 +182,8 @@ footer {
   background-color: #900080 !important;
   color: white !important;
 }
+
+
+.nascosta {
+  display: none !important;
+}
