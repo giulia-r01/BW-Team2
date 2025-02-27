@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     star.dataset.value = i;
 
     star.addEventListener("click", function () {
-      rating = parseInt(this.dataset.value);
+      const clickedValue = parseInt(this.dataset.value);
+      rating = rating === clickedValue ? 0 : clickedValue;
       updateStars(rating);
     });
 
