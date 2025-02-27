@@ -6,7 +6,7 @@ body {
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -29,7 +29,6 @@ h2 {
   font-size: 1.5em;
   display: block;
   margin-bottom: 1em;
- 
 }
 
 .paragraph2 {
@@ -58,51 +57,48 @@ strong {
 }
 
 input {
-margin: 2em;
-color: rgb(250, 238, 238);
-   font-size: 1.2em;
-   font-family: "Outfit", serif;
-   font-weight: 400;
-   border: none;
-   background-color: transparent;
-   margin-left: 25%;
-   outline: none;
-   margin-bottom: 1%;
-   margin-left: 22%;
-   margin-top: 3em;
-
+  margin: 2em;
+  color: rgb(250, 238, 238);
+  font-size: 1.2em;
+  font-family: "Outfit", serif;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  margin-left: 25%;
+  outline: none;
+  margin-bottom: 1%;
+  margin-left: 22%;
+  margin-top: 3em;
 }
 
 hr {
-  border:solid #900080 1.5px;
+  border: solid #900080 1.5px;
   margin-top: 0;
   width: 60%;
-border-width: 2.5px 0 0 0;
-  }
-
+  border-width: 2.5px 0 0 0;
+}
 
 button {
   align-items: center;
   display: inline-table;
   margin-left: 40%;
   width: 13em;
-  height: 3.0em;
-   color: rgb(3, 2, 2);
-   font-size: 1.2em;
-   font-family: "Outfit", serif;
-   font-weight: bold;
-   box-shadow: 0px 0px 4px 4px aqua;
-   border: none;
-   background-color: aqua;
-   margin-top: 2.8em;
-
+  height: 3em;
+  color: rgb(3, 2, 2);
+  font-size: 1.2em;
+  font-family: "Outfit", serif;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px 4px aqua;
+  border: none;
+  background-color: aqua;
+  margin-top: 2.8em;
+  cursor: pointer;
 }
 
 .stars {
   display: flex;
   justify-content: center;
   gap: 5px;
-  
 }
 .star {
   font-size: 70px;
@@ -110,8 +106,9 @@ button {
   color: #00032c;
   transition: color 0.3s;
   margin-top: 0.8em;
-  }
-  
-.star.active, .star:hover {
-  color: #00FFFF;
+}
+
+.star.active,
+.star:hover {
+  color: #00ffff;
 }
