@@ -50,6 +50,7 @@ function updateTimer() {
     } else {
         clearInterval(timerInterval) // Ferma il timer quando arriva a zero
         alert("Tempo scaduto! Passa alla prossima domanda")
+        document.getElementById("procedi").click();
     }
 
     // Testo del timer
