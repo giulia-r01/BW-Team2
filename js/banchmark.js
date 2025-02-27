@@ -56,7 +56,7 @@ function updateTimer() {
     document.getElementById("contatore-numero").textContent = ` ${timeRemaining} `
 
     // Aggiorna i dati del grafico
-    data.datasets[0].data = [timeRemaining, 60 - timeRemaining]
+    data.datasets[0].data = [60 - timeRemaining, timeRemaining] // Reverse order
 
     // Aggiorno solo la sezione del timer
     doughnutChart.update()
@@ -208,8 +208,6 @@ const setNewQuestion = function (questionInput) {
 }
 setNewQuestion(questions[currentQuestion])
 
-
-
 const checkAnswer = function (selectedAnswer) {
     const currentQuestionData = questions[currentQuestion]
     const correntAnswer = currentQuestionData.correct_answer
@@ -221,27 +219,23 @@ const checkAnswer = function (selectedAnswer) {
 
 }
 
+const selectAnswer = document
+    .querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4")
+    .forEach((answerBox) => {
+        answerBox.addEventListener("click", () => {
+            console.log("Risposta cliccata!")
+            document
+                .querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4")
+                .forEach((box) => {
+                    if (box !== answerBox) {
+                        box.classList.remove("select")
+                    }
+                })
+            answerBox.classList.toggle("select")
 
-
-
-const selectAnswer = document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").forEach(answerBox => {
-    answerBox.addEventListener("click", () => {
-        console.log("Risposta cliccata!")
-        document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").forEach(box => {
-            if (box !== answerBox) {
-                box.classList.remove("select");
-
-            }
-        });
-        answerBox.classList.toggle("select");
-
-
-        return answerBox
-
-    });
-});
-
-
+            return answerBox
+        })
+    })
 
 const button = document.getElementById("procedi")
 button.addEventListener("click", () => {
