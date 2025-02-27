@@ -1,8 +1,15 @@
+let punteggio = localStorage.getItem("punteggio");
+
+if (punteggio === null) {
+  punteggio = correctAnswersCount;
+} else {
+  punteggio = parseInt(punteggio, 10);
+}
 let myCanvas = document.getElementById("myCanvas").getContext("2d");
 myCanvas.width = 400;
 myCanvas.height = 400;
 let myLabels;
-let myData = [4, 6];
+let myData = [10 - punteggio, punteggio];
 let chart = new Chart(myCanvas, {
   type: "doughnut",
   data: {
