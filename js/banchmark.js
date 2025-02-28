@@ -232,14 +232,20 @@ setNewQuestion(questions[currentQuestion])
 //conteggio risposte corrette//
 const checkAnswer = function (selectedAnswer) {
     const currentQuestionData = questions[currentQuestion]
-    const correntAnswer = currentQuestionData.correct_answer
+    const correctAnswer = currentQuestionData.correct_answer
 
-    if (selectedAnswer === correntAnswer) {
+    if (selectedAnswer === correctAnswer) {
         correctAnswersCount++
+
         console.log("Risposte corrette fino ad ora: " + correctAnswersCount)
+
     }
 
+    else {
+        alert("Risposta Sbagliata!")
+    }
 }
+
 //aggiungiamo classe per selezionare una risposta//
 const selectAnswer = document
     .querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4")
@@ -265,7 +271,12 @@ button.addEventListener("click", () => {
     const selected = document.querySelector(".select")
     if (selected) {
         checkAnswer(selected.innerText)
+
     }
+
+
+
+
 
 
     if (currentQuestion < questions.length - 1) {
@@ -275,6 +286,7 @@ button.addEventListener("click", () => {
         document.querySelectorAll("#answer-1, #answer-2, #answer-3, #answer-4").forEach(box => {
             {
                 box.classList.remove("select");
+
             }
         })
 
